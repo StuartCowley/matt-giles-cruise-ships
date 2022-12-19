@@ -1,0 +1,19 @@
+{
+  "name": "cruise-ships",
+  "version": "1.0.0",
+  "description": "Cruise Ships",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matty92G/cruise-ships.git"
+  },
+  "author": "Matthew Giles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matty92G/cruise-ships/issues"
+  },
+  "homepage": "https://github.com/Matty92G/cruise-ships#readme"
+}
