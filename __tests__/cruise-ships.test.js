@@ -1,7 +1,8 @@
 /* globals describe it expect */
 const {
     Ship,
-    Port
+    Port,
+    Itinerary
 } = require('../src/Ship.js');
 
 describe("Ship", () => {
@@ -16,11 +17,18 @@ describe("Port", () => {
     });
 });
 
+describe("Itinerary", () => {
+    it('Can be instantiated', () => {
+        expect(new Itinerary()).toBeInstanceOf(Object);
+    });
+});
+
 describe("I want a ship to have a starting port.", () => {
     it('Has a starting port', () => {
-        const dover = new Port('Dover');
-        const ship = new Ship(dover);
-        expect(ship.currentPort).toBe(dover);
+        const port = new Port('Dover');
+        const itinerary = new Itinerary([port]);
+        const ship = new Ship(port);
+        expect(ship.currentPort).toBe(port);
     });
 });
 
@@ -30,6 +38,7 @@ describe("I want a ship to be able to set sail from a port.", () => {
         const ship = new Ship(dover);
         ship.setSail();
         expect(ship.currentPort).toBeFalsy();
+        expect(ship.previousPort).toBe(dover);
     });
 });
 
@@ -41,5 +50,12 @@ describe("I want a ship to be able to dock at a different port.", () => {
         ship.setSail();
         ship.dock(calais);
         expect(ship.currentPort).toBe(calais);
+    });
+});
+
+describe("I want a ship to take an itinerary which determines at which port it next docks.", () => {
+    it('Check the Itinerary', () => {
+    const dover = new Port('Dover');
+    const ship = new Ship(dover);    
     });
 });
