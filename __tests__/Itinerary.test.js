@@ -1,9 +1,11 @@
 /* globals describe it expect */
 const {
     Ship,
-    Port,
-    Itinerary
+    Port
 } = require('../src/Ship.js');
+const {
+    Itinerary
+} = require('../src/Itinerary.js');
 
 describe("I want a ship to take an itinerary which determines at which port it next docks.", () => {
     it('Check the Itinerary', () => {
