@@ -8,9 +8,9 @@ describe("Port", () => {
   let queenMary;
   beforeEach(() => {
     port = new Port("Dover");
-    ship = {};
-    titanic = {};
-    queenMary = {};
+    ship = jest.fn();
+    titanic = jest.fn();
+    queenMary = jest.fn();
   });
   it("Can be instantiated", () => {
     expect(new Port()).toBeInstanceOf(Object);
