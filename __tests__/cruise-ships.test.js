@@ -1,6 +1,5 @@
 /* globals describe it expect */
 const { Ship } = require("../src/Ship.js");
-const { Itinerary } = require("../src/Itinerary.js");
 
 describe("Ship", () => {
   describe("with ports and an itinerary", () => {
@@ -21,7 +20,9 @@ describe("Ship", () => {
         name: 'Calais',
         ships: []
       };
-      itinerary = new Itinerary([dover, calais]);
+      itinerary = {
+        ports: [dover, calais]
+      };
       ship = new Ship(itinerary);
     });
     it("Can be instantiated", () => {
