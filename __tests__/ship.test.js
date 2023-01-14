@@ -11,17 +11,17 @@ describe("Ship", () => {
       dover = {
         addShip: jest.fn(),
         removeShip: jest.fn(),
-        name: 'Dover',
-        ships: []
+        name: "Dover",
+        ships: [],
       };
       calais = {
         addShip: jest.fn(),
         removeShip: jest.fn(),
-        name: 'Calais',
-        ships: []
+        name: "Calais",
+        ships: [],
       };
       itinerary = {
-        ports: [dover, calais]
+        ports: [dover, calais],
       };
       ship = new Ship(itinerary);
     });
